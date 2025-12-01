@@ -1,0 +1,72 @@
+---
+title: "Advent of Code 2025"
+format: gfm
+editor: source
+execute:
+  echo: false
+  warning: false
+  message: false
+fig-dpi: 300
+---
+
+```{r}
+library(tidyverse)
+library(extrafont)
+library(ggstar)
+
+aoc_green <- "#009900"
+aoc_gold <- "#ffff66"
+github_grey <- "#0d1117"
+
+# AoC-ish plot theme that blends into the GitHub dark mode
+aoc_theme <- 
+  theme(
+    panel.background = element_rect(fill = NA, colour = NA, linewidth = 1),
+    panel.grid = element_blank(),
+    plot.background = element_rect(fill = github_grey, colour = github_grey),
+    plot.title = element_text(colour = "white", size = 20, family = "Consolas"),
+    strip.background = element_rect(fill = NA, colour = NA),
+    strip.text = element_text(size = 16, colour = aoc_green),
+    axis.text = element_text(size = 12, colour = "white", family = "Consolas"),
+    axis.title = element_text(size = 14, colour = "white", family = "Consolas"),
+    axis.line = element_line(colour = "white", linewidth = .5),
+    axis.ticks = element_line(colour = "white", linewidth = .5),
+    legend.position = "none"
+  )
+
+past_performance <- 
+  data.frame(
+    year = factor(2020:2025),
+    stars = c(31, 33, 30, 40, 31, 2)
+  )
+```
+
+This repo contains my solutions for the [Advent of Code 2025](https://adventofcode.com/2025) in `R`. 
+Note that I don't share my inputs, as requested in the [AoC About section](https://adventofcode.com/2025/about).
+
+Here's my past performance (and this year's performance, so far). Note that in 2025, there were 12 instead of 25 puzzles (i.e., 24 instead of 50 gold stars to earn).
+
+```{r}
+#| label: performance
+#| fig.height: 2.5
+past_performance %>% 
+  ggplot(aes(x = year, y = stars)) +
+  geom_star(fill = aoc_gold, size = 5) +
+  geom_path(colour = aoc_gold, group = 1) +
+  scale_y_continuous(
+    # breaks = seq(30, 40, 2), 
+    limits = c(min(past_performance$stars) - 1, max(past_performance$stars) + 1)
+    ) +
+  aoc_theme
+```
+
+## TOC
+
+Here is a table of contents showing you what each day was about, along with the run time. 
+It's a crude measure, where I simply calculate the difference in `Sys.time()` at the beginning and the end of part 1, and the beginning and end of part 2. 
+That means in some occasions, the runtime for part 2 will be much shorter because part of the code needed to solve part 2 was already run in part 1. 
+Reading in the data (and sometimes, basic preprocessing that has nothing to do with the puzzle solution) is excluded from the run time calculations.
+
+| Day | Title                   | Run Time            |
+|---------------|---------------|---------------|
+| 1   | Secret Entrance        | 0.30 (120.91) ms     |
