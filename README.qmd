@@ -37,7 +37,7 @@ aoc_theme <-
 past_performance <- 
   data.frame(
     year = factor(2020:2025),
-    stars = c(31, 33, 30, 40, 31, 2)
+    stars = c(31, 33, 30, 40, 31, 4)
   )
 ```
 
@@ -69,4 +69,5 @@ Reading in the data (and sometimes, basic preprocessing that has nothing to do w
 
 | Day | Title                   | Run Time            |
 |---------------|---------------|---------------|
-| 1   | Secret Entrance        | 0.30 (120.91) ms     |
+| 1   | Secret Entrance        | 0.30 / 120.91 ms     |
+| 2   | Gift Shop        | 2.97 s / 4.75 mins :-(     |
