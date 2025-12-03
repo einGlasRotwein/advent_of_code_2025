@@ -27,3 +27,4 @@ solution) is excluded from the run time calculations.
 |-----|-----------------|------------------------|
 | 1   | Secret Entrance | 0.30 / 120.91 ms       |
 | 2   | Gift Shop       | 2.97 s / 4.75 mins :-( |
+| 3   | Lobby           | 15.11 / 15.43 ms       |
