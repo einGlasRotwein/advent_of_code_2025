@@ -23,8 +23,9 @@ to solve part 2 was already run in part 1. Reading in the data (and
 sometimes, basic preprocessing that has nothing to do with the puzzle
 solution) is excluded from the run time calculations.
 
-| Day | Title           | Run Time               |
-|-----|-----------------|------------------------|
-| 1   | Secret Entrance | 0.30 / 120.91 ms       |
-| 2   | Gift Shop       | 2.97 s / 4.75 mins :-( |
-| 3   | Lobby           | 15.11 / 15.43 ms       |
+| Day | Title               | Run Time               |
+|-----|---------------------|------------------------|
+| 1   | Secret Entrance     | 0.30 / 120.91 ms       |
+| 2   | Gift Shop           | 2.97 s / 4.75 mins :-( |
+| 3   | Lobby               | 15.11 / 15.43 ms       |
+| 4   | Printing Department | 0.19 / 3.63 s          |
