@@ -29,3 +29,4 @@ solution) is excluded from the run time calculations.
 | 2   | Gift Shop           | 2.97 s / 4.75 mins :-( |
 | 3   | Lobby               | 15.11 / 15.43 ms       |
 | 4   | Printing Department | 0.19 / 3.63 s          |
+| 5   | Cafeteria           | 86.01 / 84.8 ms        |
