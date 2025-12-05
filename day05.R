@@ -40,7 +40,6 @@ start <- Sys.time()
 unique_ranges1 <- fresh1[1]
 unique_ranges2 <- fresh2[1]
 
-# for (i in 2:96) {
 for (i in 2:length(fresh1)) {
   # consecutively cut out overlaps between ranges
   
@@ -49,7 +48,6 @@ for (i in 2:length(fresh1)) {
   cut_range1 <- fresh1[i]
   cut_range2 <- fresh2[i]
   
-  # for (j in 1:91) {
   for (j in seq_along(unique_ranges1)) {
     
     cut_range_counter <- 1
