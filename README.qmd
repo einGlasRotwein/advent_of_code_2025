@@ -52,13 +52,13 @@ Here's my past performance (and this year's performance, so far). Note that in 2
 #| fig.height: 2.5
 past_performance %>% 
   mutate(percent_stars = stars / total_stars * 100) %>% 
-  ggplot(aes(x = year, y = stars)) +
+  ggplot(aes(x = year, y = percent_stars)) +
   geom_star(fill = aoc_gold, size = 5) +
   geom_path(colour = aoc_gold, group = 1) +
   scale_y_continuous(
     limits = c(min(past_performance$stars) - 1, max(past_performance$stars) + 1)
   ) +
-  labs("% stars earned") +
+  labs(y = "% stars earned") +
   aoc_theme
 ```
 
