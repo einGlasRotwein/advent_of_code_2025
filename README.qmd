@@ -37,26 +37,28 @@ aoc_theme <-
 past_performance <- 
   data.frame(
     year = factor(2020:2025),
-    stars = c(31, 33, 30, 40, 31, 10)
+    stars = c(31, 33, 30, 40, 31, 12),
+    total_stars = c(rep(50, 5), 24)
   )
 ```
 
 This repo contains my solutions for the [Advent of Code 2025](https://adventofcode.com/2025) in `R`. 
 Note that I don't share my inputs, as requested in the [AoC About section](https://adventofcode.com/2025/about).
 
-Here's my past performance (and this year's performance, so far). Note that in 2025, there were 12 instead of 25 puzzles (i.e., 24 instead of 50 gold stars to earn).
+Here's my past performance (and this year's performance, so far). Note that in 2025, there were 12 instead of 25 puzzles (i.e., 24 instead of 50 gold stars to earn). This is why I display the performance as % stars earned.
 
 ```{r}
 #| label: performance
 #| fig.height: 2.5
 past_performance %>% 
+  mutate(percent_stars = stars / total_stars * 100) %>% 
   ggplot(aes(x = year, y = stars)) +
   geom_star(fill = aoc_gold, size = 5) +
   geom_path(colour = aoc_gold, group = 1) +
   scale_y_continuous(
-    # breaks = seq(30, 40, 2), 
     limits = c(min(past_performance$stars) - 1, max(past_performance$stars) + 1)
-    ) +
+  ) +
+  labs("% stars earned") +
   aoc_theme
 ```
 
@@ -74,3 +76,4 @@ Reading in the data (and sometimes, basic preprocessing that has nothing to do w
 | 3   | Lobby        | 15.11 / 15.43 ms    |
 | 4   | Printing Department        | 0.19 / 3.63 s    |
 | 5   | Cafeteria        | 86.01 / 84.8 ms    |
+| 6   | Trash Compactor        | 6.21 / 59.7 ms    |

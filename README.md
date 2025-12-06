@@ -8,7 +8,8 @@ section](https://adventofcode.com/2025/about).
 
 Here’s my past performance (and this year’s performance, so far). Note
 that in 2025, there were 12 instead of 25 puzzles (i.e., 24 instead of
-50 gold stars to earn).
+50 gold stars to earn). This is why I display the performance as % stars
+earned.
 
 ![](README_files/figure-commonmark/performance-1.png)
 
@@ -30,3 +31,4 @@ solution) is excluded from the run time calculations.
 | 3   | Lobby               | 15.11 / 15.43 ms       |
 | 4   | Printing Department | 0.19 / 3.63 s          |
 | 5   | Cafeteria           | 86.01 / 84.8 ms        |
+| 6   | Trash Compactor     | 6.21 / 59.7 ms         |
