@@ -32,3 +32,4 @@ solution) is excluded from the run time calculations.
 | 4   | Printing Department | 0.19 / 3.63 s          |
 | 5   | Cafeteria           | 86.01 / 84.8 ms        |
 | 6   | Trash Compactor     | 6.21 / 59.7 ms         |
+| 7   | Laboratories        | 7.27 / 73.42 ms        |
