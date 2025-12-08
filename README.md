@@ -33,3 +33,4 @@ solution) is excluded from the run time calculations.
 | 5   | Cafeteria           | 86.01 / 84.8 ms        |
 | 6   | Trash Compactor     | 6.21 / 59.7 ms         |
 | 7   | Laboratories        | 7.27 / 73.42 ms        |
+| 8   | Playground          | 1.48 / 4.35 mins       |
